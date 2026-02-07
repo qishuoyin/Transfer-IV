@@ -4,12 +4,7 @@ Transfer Learning with Instrumental Variables - A Python package for factor-augm
 
 ## Overview
 
-Transfer-IV implements advanced transfer learning techniques for neural networks with instrumental variables. The package provides:
-
-- **FASTNN (Factor-Augmented Sparse Throughput Neural Network)**: A specialized architecture that combines factor analysis with sparse neural networks
-- **Fine-tuning Estimator**: Two-stage training process for transfer learning from source to target domains
-- **Factor Matrix Estimator**: Tools for computing and evaluating diversified projection matrices
-- **VanillaNN**: Standard deep ReLU network with fine-tuning support
+Transfer-IV implements advanced transfer learning techniques for neural networks with instrumental variables. 
 
 ## Features
 
@@ -127,25 +122,35 @@ In fine-tuning mode, the model accepts an additional pre-trained signal `s_hat` 
 1. **Stage 1 - Pre-training**: Train FASTNN on source domain data to learn `g^P(X)`
 2. **Stage 2 - Fine-tuning**: Train model `h` on target domain using both target features and pre-trained signal
 
+### LATE Estimator (NEED TO WRITE)
+
+There are two types of LATE estimator we may need to compare. We may need to write up the LATE estimator and use a if-else loop to decide whether we want to FAST-NN model structure or Vanilla-NN structure. 
+
+### ATE Estimator by transfer (NEED TO WRITE)
+
+This is the second step of our project. We will use this python file to modulize the functions to run ATE estimation by transfer learnining. 
+
 ## Project Structure
 
 ```
 Transfer-IV/
 ├── transfer_iv/
 │   ├── __init__.py
-│   ├── dataloader.py              # PyTorch Dataset and DataLoader
+│   ├── dataloader.py                  # PyTorch Dataset and DataLoader
 │   ├── estimator/
 │   │   ├── __init__.py
-│   │   ├── base_trainer.py        # Training loop with early stopping
-│   │   ├── factor_estimator.py    # Factor matrix estimation
-│   │   └── finetune_estimator.py  # Two-stage fine-tuning
+│   │   ├── base_trainer.py            # Training loop with early stopping
+│   │   ├── factor_estimator.py        # Factor matrix estimation
+│   │   ├── finetune_estimator.py      # Two-stage fine-tuning
+│   │   ├── late_estimator.py          # LATE estimator (Need to be written)
+│   │   └── ate_transfer_estimator.py  # ATE by transfer estimator (Need to be written)
 │   ├── model/
 │   │   ├── __init__.py
-│   │   ├── model_FASTNN.py        # FASTNN architecture
-│   │   └── model_VanillaNN.py     # Vanilla neural network
+│   │   ├── model_FASTNN.py            # FASTNN architecture
+│   │   └── model_VanillaNN.py         # Vanilla neural network
 │   └── utility/
 │       ├── __init__.py
-│       └── utility_functions.py   # Matrix computations and data loading
+│       └── utility_functions.py       # Matrix computations and data loading
 ├── setup.py
 ├── requirements.txt
 └── README.md
@@ -160,9 +165,9 @@ Transfer-IV/
 
 ### Estimators
 
-- **FineTuningEstimator**: Orchestrates two-stage pre-training and fine-tuning
-- **FactorMatrixEstimator**: Computes and evaluates projection matrices (W^TL, W^Q, W^A)
 - **BaseTrainer**: Handles training loop, validation, and early stopping
+- **FactorMatrixEstimator**: Computes and evaluates projection matrices (W^TL, W^Q, W^A)
+- **FineTuningEstimator**: Orchestrates two-stage pre-training and fine-tuning
 
 ### Utilities
 
@@ -184,19 +189,6 @@ All computations are optimized for GPU execution, including:
 - Covariance matrix computation
 - Eigenvalue decomposition
 - Neural network training
-
-## Citation
-
-If you use this package in your research, please cite:
-
-```bibtex
-@software{transfer_iv2024,
-  author = {Qishuo},
-  title = {Transfer-IV: Transfer Learning with Instrumental Variables},
-  year = {2024},
-  url = {https://github.com/yourusername/Transfer-IV}
-}
-```
 
 ## License
 

@@ -4,7 +4,7 @@
 """
 @author: Qishuo 
 
-FAN_Lasso: Dataloader for PyTorch models, updated for fine-tuning.
+Transfer-IV: Dataloader for PyTorch models, updated for fine-tuning.
 """
 
 

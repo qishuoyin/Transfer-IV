@@ -4,7 +4,7 @@
 """
 @author: Qishuo 
 
-FINDER: Reusable trainer class, updated for fine-tuning.
+Transfer-IV: Reusable trainer class, updated for fine-tuning.
 """
 
 

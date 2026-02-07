@@ -4,7 +4,7 @@
 """
 @author: Qishuo
 
-FAN_Lasso: Model structure for VanillaNN, with fine-tuning support.
+Transfer-IV: Model structure for VanillaNN, with fine-tuning support.
 """
 
 

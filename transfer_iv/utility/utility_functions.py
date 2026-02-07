@@ -4,7 +4,7 @@
 """
 @author: Qishuo 
 
-FAN_Lasso: Utility functions for data handling and matrix computation.
+Transfer-IV: Utility functions for data handling and matrix computation.
 """
 
 

@@ -4,7 +4,7 @@
 """
 @author: Qishuo 
 
-FAN_Lasso: Estimator for the factor projection matrices (for Experiment 1).
+Transfer-IV: Estimator for the factor projection matrices (for Experiment 1).
 """
 
 

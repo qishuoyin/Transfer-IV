@@ -4,7 +4,7 @@
 """
 @author: Qishuo
 
-FAN-Lasso: Main estimator for the fine-tuning task.
+Transfer-IV: Main estimator for the fine-tuning task.
 """
 
 

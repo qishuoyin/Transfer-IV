@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """
-@author: Qishuo (Adapted for FINDER)
+@author: Qishuo 
 
-FINDER: Model structure for Factor Augmented Sparse Throughput NN.
+Transfer-IV: Model structure for Factor Augmented Sparse Throughput NN.
 This version includes the full original architecture and fine-tuning support.
 """
 
