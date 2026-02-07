@@ -17,10 +17,22 @@ Transfer-IV implements advanced transfer learning techniques for neural networks
 
 ## Installation
 
-### From source
+### Using Conda (Recommended)
 
 ```bash
-git clone https://github.com/yourusername/Transfer-IV.git
+# Clone the repository
+git clone https://github.com/qishuoyin/Transfer-IV.git
+cd Transfer-IV
+
+# Create and activate the conda environment
+conda env create -f environment.yml
+conda activate Transfer_IV_env
+```
+
+### Using pip
+
+```bash
+git clone https://github.com/qishuoyin/Transfer-IV.git
 cd Transfer-IV
 pip install -e .
 ```

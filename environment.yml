@@ -1,0 +1,21 @@
+name: Transfer_IV_env
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy>=1.20.0
+  - pandas>=1.3.0
+  - scipy>=1.7.0
+  - pytorch>=1.9.0
+  - torchvision
+  - torchaudio
+  - matplotlib
+  - seaborn
+  - jupyter
+  - ipykernel
+  - pip
+  - pip:
+    - -e .
+
