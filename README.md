@@ -161,10 +161,40 @@ Transfer-IV/
 │   │   ├── model_FASTNN.py            # FASTNN architecture
 │   │   └── model_VanillaNN.py         # Vanilla neural network
 │   └── utility/
-│       ├── __init__.py
-│       └── utility_functions.py       # Matrix computations and data loading
-├── setup.py
-├── requirements.txt
+│   │   ├── __init__.py
+│   │   └── utility_functions.py       # Matrix computations and data loading
+├── exp/
+│   ├── data_generate/
+│   │   ├── data_generate_exp1_late_nn.py
+│   │   └── data_generate_exp2_ate_transfer.py
+│   ├── exp1_late_nn/
+│   │   ├── run_exp1_late_FASTNN.py
+│   │   ├── run_exp1_late_VanillaNN.py
+│   │   └── run_exp1_late_oracleNN.py
+│   ├── exp2_ate_transfer/
+│   │   ├── run_exp2_ate_transfer_FAN_Lasso.py
+│   │   ├── run_exp2_ate_transfer_FT_VanillaNN.py
+│   │   ├── run_exp2_ate_transfer_FASTNN.py
+│   │   ├── run_exp2_ate_transfer_VanillaNN.py
+│   │   └── run_exp2_ate_transfer_oracleNN.py
+├── scripts/
+│   ├── data_generate/
+│   │   ├── data_generate_exp1_late_nn.sh
+│   │   └── data_generate_exp2_ate_transfer.sh
+│   ├── exp1_late_nn/
+│   │   ├── run_exp1_late_FASTNN.sh
+│   │   ├── run_exp1_late_VanillaNN.sh
+│   │   ├── run_exp1_late_oracleNN.sh
+│   │   └── run_exp1_all.sh
+│   ├── exp2_ate_transfer/
+│   │   ├── run_exp2_ate_transfer_FAN_Lasso.sh
+│   │   ├── run_exp2_ate_transfer_FT_VanillaNN.sh
+│   │   ├── run_exp2_ate_transfer_FASTNN.sh
+│   │   ├── run_exp2_ate_transfer_VanillaNN.sh
+│   │   ├── run_exp2_ate_transfer_oracleNN.sh
+│   │   └── run_exp2_all.sh
+├── environment.yml
+├── .gitignore
 └── README.md
 ```
 
